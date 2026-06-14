@@ -1,0 +1,324 @@
+/* Configurações Globais Baseadas no Tema Retro GBA */
+:root {
+    --bg-red: #DC5339;
+    --card-bg-blue: #E1EDF7;
+    --card-border-blue: #5286CE;
+    --card-bg-yellow: #FFF6DF;
+    --card-border-yellow: #DCA142;
+    --text-dark: #333333;
+    --text-red: #E64A3B;
+    --window-border: #222222;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--text-dark);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Container Principal (O Card) */
+.trainer-card {
+    background-color: var(--bg-red);
+    width: 100%;
+    max-width: 1100px;
+    border: 4px solid var(--window-border);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 0 #111;
+}
+
+/* Cabeçalho do Card */
+.card-header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #E86850, #C5442D);
+    border: 3px solid var(--window-border);
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.card-header h1 {
+    font-size: 16px;
+    text-shadow: 2px 2px 0px #555;
+    letter-spacing: 1px;
+}
+
+/* Corpo Layout Dividido */
+.card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Coluna Esquerda (Azul) */
+.left-column {
+    background-color: var(--card-bg-blue);
+    border: 3px solid var(--card-border-blue);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.info-box {
+    margin-bottom: 15px;
+}
+
+.info-row {
+    display: flex;
+    border-bottom: 2px solid white;
+    padding: 8px 0;
+}
+
+.info-row .label {
+    color: var(--card-border-blue);
+    width: 120px;
+}
+
+.info-row .name-highlight {
+    color: var(--text-red);
+}
+
+/* Seção Sobre Mim Estilo Caixa de Texto */
+.about-section {
+    border: 3px solid var(--card-border-blue);
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    background-color: var(--card-border-blue);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.about-content p {
+    margin-bottom: 8px;
+    font-size: 9px;
+    text-align:left;
+}
+
+/* Disciplinas Favoritas (Estilo Badges) */
+.subjects-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.subject-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px; /* Espaço entre o ícone e o texto */
+    border: 2px solid #555;
+    border-radius: 50px;
+    padding: 8px 14px;
+    color: white;
+    font-size: 8px;
+    text-shadow: 1px 1px 0 #000;
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.3);
+    line-height: normal;
+}
+
+/* Tamanho do ícone do elemento */
+.element-icon {
+    font-size: 12px;
+    transform: translateY(-2px);
+}
+
+/* Cores dos Elementos baseadas nos jogos de Pokémon */
+.type-grass {
+    background-color: #78C850;
+    border-color: #4E8235;
+}
+
+.type-fire {
+    background-color: #F08030;
+    border-color: #9C5221;
+}
+
+.type-water {
+    background-color: #6890F0;
+    border-color: #445E9C;
+}
+
+.type-electric {
+    background-color: #F8D030;
+    border-color: #A1871F;
+}
+
+/* Outros tipos que você pode querer adicionar no futuro: */
+.type-psychic {
+    background-color: #F85888;
+    border-color: #A13959;
+}
+
+.type-ghost {
+    background-color: #705898;
+    border-color: #493963;
+}
+
+.type-steel {
+    background-color: #B8B8D0;
+    border-color: #787888;
+}
+
+/* Coluna Direita (Amarela) */
+.right-column {
+    background-color: var(--card-bg-yellow);
+    border: 3px solid var(--card-border-yellow);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skills-title, .projects-title {
+    background-color: var(--card-border-yellow);
+    color: white;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.skills-content ul {
+    list-style: none;
+}
+
+.skills-content li {
+    margin-bottom: 6px;
+    font-size: 8px;
+}
+
+/* Cards de Projetos */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-card {
+    display: flex;
+    background-color: white;
+    border: 2px dashed var(--card-border-yellow);
+    padding: 8px;
+    border-radius: 6px;
+    gap: 10px;
+}
+
+.project-img-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.project-info h4 {
+    color: var(--text-red);
+    font-size: 9px;
+    margin-bottom: 4px;
+}
+
+.project-info p {
+    font-size: 8px;
+    margin-bottom: 6px;
+}
+
+.project-info a {
+    color: var(--card-border-blue);
+    text-decoration: none;
+    font-size: 8px;
+}
+
+/* Rodapé Caixa de Texto */
+.card-footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.dialog-text {
+    background-color: white;
+    border: 3px solid var(--window-border);
+    border-radius: 8px;
+    padding: 12px;
+    position: relative;
+    min-height: 50px;
+}
+
+.blink-arrow {
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    color: var(--text-red);
+    animation: blink 0.8s infinite alternate;
+}
+
+/* Botão de Contato Pokebola */
+.contact-btn {
+    background-color: var(--card-border-blue);
+    border: 3px solid var(--window-border);
+    border-radius: 8px;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    box-shadow: inset -3px -3px 0px rgba(0,0,0,0.2);
+}
+
+/* Mini Ícones Simulados */
+.pokeball-icon, .pokeball-mini {
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(to bottom, red 50%, white 50%);
+    border: 2px solid black;
+    border-radius: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Animação da Setinha */
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
