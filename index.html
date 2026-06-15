@@ -16,25 +16,28 @@
         </header>
 
         <div class="card-body">
-            
+
             <section class="left-column">
-                <div class="info-box">
-                    <div class="info-row">
-                        <span class="label">NAME:</span>
-                        <span class="value name-highlight">Adriel Asafe</span>
+                <div class="info-container">
+                    <div class="info-box">
+                        <div class="info-row">
+                            <span class="label">NAME:</span>
+                            <span class="value name-highlight">Adriel Asafe</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">ROLE:</span>
+                            <span class="value">Computer Science Student</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">LOCATION:</span>
+                            <span class="value">Curitiba - PR</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">ID No.</span>
+                            <span class="value">2026</span>
+                        </div>
                     </div>
-                    <div class="info-row">
-                        <span class="label">ROLE:</span>
-                        <span class="value">Computer Science Student</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">LOCATION:</span>
-                        <span class="value">Curitiba - PR</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">ID No.</span>
-                        <span class="value">2026</span>
-                    </div>
+                    <img src="images/avatar.jpeg" alt="Avatar" class="avatar-img">
                 </div>
 
                 <fieldset class="about-section">
@@ -48,21 +51,18 @@
                     </div>
                 </fieldset>
 
-                <div class="badges-section">
-                    <h3 class="box-title">FAVORITE SUBJECTS</h3>
+                <div class="subjects-section">
+                    <h3 class="section-subtitle">FAVORITE SUBJECTS</h3>
                     <div class="subjects-grid">
                         <div class="subject-badge type-grass" title="Programação">
                             <span class="element-icon">🌿</span> BIOTECH
                         </div>
-                        
                         <div class="subject-badge type-fire" title="Inteligência Artificial">
                             <span class="element-icon">🔥</span> I.A.
                         </div>
-                        
                         <div class="subject-badge type-water" title="Estrutura de Dados">
-                            <span class="element-icon">💧</span> 
+                            <span class="element-icon">💧</span> Data Analysis
                         </div>
-                        
                         <div class="subject-badge type-electric" title="Banco de Dados">
                             <span class="element-icon">⚡</span> AUTOMATION
                         </div>
@@ -71,53 +71,53 @@
             </section>
 
             <section class="right-column">
-                
-                <div class="skills-box">
-                    <h3 class="skills-title">SKILLS & TRIVIA</h3>
+
+                <div class="hobbies-section">
+                    <h3 class="skills-title">HOBBIES AND CURIOSITIES</h3>
                     <div class="skills-content">
-                        <ul>
-                            <li>⚡ Python & JS</li>
-                            <li>🎨 HTML & CSS</li>
-                            <li>📊 Data Analysis</li>
+                        <ul class="hobbies-list">
+                            <li>
+                                <span class="hobby-emoji">📖</span>
+                                <span>Leitura</span>
+                            </li>
+                            <li>
+                                <span class="hobby-emoji">🍙</span>
+                                <span>Animes</span>
+                            </li>
+                            <li>
+                                <span class="hobby-emoji">🎮</span>
+                                <span>Games</span>
+                            </li>
                         </ul>
                         <ul class="curiosities-list">
-                            <li>💡 Fato 1: Curiosidade aqui</li>
-                            <li>💡 Fato 2: Outra curiosidade</li>
-                            <li>💡 Fato 3: Mais uma curiosidade</li>
+                            <li>💡 Estudei 1 ano de medicina</li>
+                            <li>💡 Já morei na Argentina</li>
+                            <li>💡 Sou pai de 2 felinos</li>
+                            <li>💡 Quero trabalhar com biotecnoligia</li>
+                            <li>💡 Pokemon favorito: Eevee</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="projects-box">
-                    <h3 class="projects-title">PROJECTS & HOBBIES</h3>
+                <div class="projects-section">
+                    <h3 class="projects-title">PROJECTS</h3>
                     <div class="projects-list">
-                        
                         <article class="project-card">
                             <div class="project-img-placeholder">🎮</div>
                             <div class="project-info">
                                 <h4>CONSTRUCT GAME</h4>
                                 <p>Jogo arcade desenvolvido no Construct focado em mecânicas retrô.</p>
-                                <a href="#" target="_blank">VIEW PROJECT ▶</a>
+                                <a href="#" onclick="openModal('modal-construct')" class="view-project">VIEW PROJECT ▶</a>
                             </div>
                         </article>
-
                         <article class="project-card">
                             <div class="project-img-placeholder">📱</div>
                             <div class="project-info">
                                 <h4>PROCESSING APP</h4>
                                 <p>Aplicativo multimídia interativo explorando computação gráfica.</p>
-                                <a href="#" target="_blank">VIEW PROJECT ▶</a>
+                                <a href="#" onclick="openModal('modal-processing')" class="view-project">VIEW PROJECT ▶</a>
                             </div>
                         </article>
-
-                        <article class="project-card hobby-card">
-                            <div class="project-img-placeholder">🕹️</div>
-                            <div class="project-info">
-                                <h4>MY HOBBIES</h4>
-                                <p>Jogar RPGs antigos, ler ficção científica e codar projetos paralelos.</p>
-                            </div>
-                        </article>
-
                     </div>
                 </div>
 
@@ -129,11 +129,67 @@
                 <p>Thanks for visiting! Let's build something amazing together!</p>
                 <span class="blink-arrow">▼</span>
             </div>
-            <a href="mailto:seu-email@email.com" class="contact-btn">
-                <div class="pokeball-mini"></div> CONTACT ▶
+            <a href="#" onclick="openModal('modal-contact')" class="contact-btn">
+                <span class="pokeball-mini"></span> CONTACT ▶
             </a>
         </footer>
     </main>
+
+    <div id="modal-construct" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <h2>CONSTRUCT GAME</h2>
+            <p class="modal-description">Jogo arcade desenvolvido no Construct focado em mecânicas retrô.</p>
+            <div class="modal-images">
+                <img src="images/construct1.png" alt="Construct Game Screenshot 1" class="modal-project-img">
+                <img src="images/construct2.png" alt="Construct Game Screenshot 2" class="modal-project-img">
+                <img src="images/construct3.png" alt="Construct Game Screenshot 3" class="modal-project-img">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-processing" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <h2>PROCESSING APP</h2>
+            <p class="modal-description">Aplicativo multimídia desenvolvido com o Processing.</p>
+            <div class="modal-images">
+                <img src="images/processing1.png" alt="Processing App Screenshot 1" class="modal-project-img">
+                <img src="images/processing2.png" alt="Processing App Screenshot 2" class="modal-project-img">
+                <img src="images/processing3.png" alt="Processing App Screenshot 3" class="modal-project-img">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-contact" class="modal" onclick="closeModal(event)">
+        <div class="modal-content modal-contact-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <h2>GET IN TOUCH</h2>
+            <div class="contact-links">
+                <a href="mailto:adrielasafe@gmail.com" class="contact-link">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <p class="contact-label">EMAIL</p>
+                        <p class="contact-value">adriel.asafe@outlook.com</p>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/adriel" target="_blank" class="contact-link">
+                    <span class="contact-icon">💼</span>
+                    <div>
+                        <p class="contact-label">LINKEDIN</p>
+                        <p class="contact-value">linkedin.com/in/adriel-asafe-41253a395</p>
+                    </div>
+                </a>
+                <a href="https://github.com/adriel" target="_blank" class="contact-link">
+                    <span class="contact-icon">💻</span>
+                    <div>
+                        <p class="contact-label">GITHUB</p>
+                        <p class="contact-value">github.com/asafe-adriel</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="index.js"></script>
 </body>
